@@ -4,7 +4,7 @@ import { ItemListGenerator } from './itemListGenerator';
 
 const BASE_URL = "https://api.hypixel.net";
 
-export class HypixelAPI {
+export default class HypixelAPI {
 
 	constructor(private apiKey: string) {
 		if(process.env.HYPIXEL_GENERATE_ITEM_LIST)
