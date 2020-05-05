@@ -1,0 +1,27 @@
+{
+    "name": "bazaaztracker",
+    "version": "0.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "type": "dist/index.d.ts",
+    "scripts": {
+        "test": "echo ",
+        "build": "tsc",
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {},
+    "keywords": [],
+    "author": "Julien Lavocat",
+    "license": "ISC",
+    "dependencies": {
+        "node-fetch": "^2.6.0"
+    },
+    "devDependencies": {
+        "@types/node-fetch": "^2.5.7",
+        "dotenv": "^8.2.0"
+    }
+}
