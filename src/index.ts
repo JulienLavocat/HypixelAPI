@@ -1,8 +1,7 @@
 import {default as fetch} from "node-fetch";
 import { Product } from './structures/product';
 import { ItemListGenerator } from './itemListGenerator';
-import { itemNames } from './data/itemNames';
-import { BazaarItem } from './structures/bazaarItem';
+import { BazaarItem } from "./structures/bazaarItem";
 
 const BASE_URL = "https://api.hypixel.net";
 
@@ -27,3 +26,7 @@ export class HypixelAPI {
 	}
 
 };
+
+export {BazaarItem} from "./structures/bazaarItem";
+export {OrderSummary} from "./structures/orderSummary";
+export {Product} from "./structures/product";
