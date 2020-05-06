@@ -22,7 +22,7 @@ export class HypixelAPI {
 		return Object.values(res.products).map((e: any) => new Product(e, withSummary));
 	}
 
-	async getBazaarItems(): Promise<any> {
+	async getBazaarItems(): Promise<BazaarItem[]> {
 		return (await this.getBazaar()).map(e => new BazaarItem(e));
 	}
 
