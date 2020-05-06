@@ -6,6 +6,7 @@ export class Product {
 	id: string;
 	name: string | null;
 	rarity: string | null;
+	category: string | null;
 	sellSummary!: OrderSummary[];
 	buySummary!: OrderSummary[];
 	sellPrice: number;
@@ -24,7 +25,11 @@ export class Product {
 
 		this.id = data.productId;
 		this.name = itemNames[this.id] ?? null;
-		this.rarity = items.find(e => e.name === this.name)?.tier ?? null;
+
+		const itemData = items.find(e => e.name === this.name);
+
+		this.rarity = itemData?.tier ?? null;
+		this.category = itemData?.category ?? null;
 		this.sellPrice = data.sellPrice;
 		this.sellVolume = data.sellVolume;
 		this.sellMovingWeek = data.sellMovingWeek;
