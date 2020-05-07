@@ -1,6 +1,6 @@
 {
     "name": "@piigo/hypixelapi",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Hypixel API wrapper",
     "main": "dist/index.js",
     "type": "dist/index.d.ts",
