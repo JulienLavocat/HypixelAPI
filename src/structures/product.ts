@@ -9,11 +9,11 @@ export class Product {
 	category: string | null;
 	sellSummary!: OrderSummary[];
 	buySummary!: OrderSummary[];
-	sellPrice: number;
+	sellPrice: string;
 	sellVolume: number;
 	sellMovingWeek: number;
 	sellOrders: number;
-	buyPrice: number;
+	buyPrice: string;
 	buyVolume: number;
 	buyMovingWeek: number;
 	buyOrders: number;
@@ -30,12 +30,12 @@ export class Product {
 
 		this.rarity = itemData?.tier ?? null;
 		this.category = itemData?.category ?? null;
-		this.sellPrice = data.sellPrice;
+		this.sellPrice = data.sellPrice.toFixed(2);
 		this.sellVolume = data.sellVolume;
 		this.sellMovingWeek = data.sellMovingWeek;
 		this.sellOrders = data.sellOrders;
 
-		this.buyPrice = data.buyPrice;
+		this.buyPrice = data.buyPrice.toFixed(2);
 		this.buyVolume = data.buyVolume;
 		this.buyMovingWeek = data.buyMovingWeek;
 		this.buyOrders = data.buyOrders;
